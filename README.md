@@ -8,8 +8,13 @@ Outline
 --------
 introduction
   about me
+    computer developer
+    likes music
+    likes games
   what is angular audio?
   why does angular audio exist?
+    originally a library to manage sounds that didnt use jquery
+    jquery - the cause of, and solution to, all of life's problems.
 
 angular audio features and usage
   organic features
