@@ -10,6 +10,9 @@ introduction
   about me
     computer developer
       maker of magic circles
+      choose your own adventure
+      ball agent
+      lorien ipsum
     likes music
     likes games
   why does angular audio exist?
