@@ -3,6 +3,7 @@ ngAudio-presentation
 
 A presentation on Angular Audio
 
+```yaml
 Outline
 --------
 introduction
@@ -20,3 +21,4 @@ a presentation demonstrating ng-audio as a directive
 a presentation demonstrating its power in javascript
 
 demonstrate this in a game? (improve adventure quest)
+```
