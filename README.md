@@ -44,6 +44,7 @@ live demonstration
   use ediotr
     ace editor
     brackets
+      brackets is very nice. all html needs to be within a tag to update
     http://en.wikipedia.org/wiki/Comparison_of_JavaScript-based_source_code_editors
 
 demonstrate this in a game? (improve adventure quest)
