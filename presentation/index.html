@@ -1,20 +1,15 @@
-<doctype html></doctype>
-<head>
-  
-</head>
-<body>
-a test
- whjat a test
-hi its me
-im your test
-    now its live updating
-    can't update without being in divl
-    live up
-    ok
-    dsa ds
-    updating works better with no script trickiness
-    does it work? it does.
-    
-    <button onclick=handleClick()>Hi</button>
-    <script src=script.js></script>
-</body>
+<!doctype html>
+
+<html ng-app=ngAudio.LiveDemo>
+    <head>
+      <script src=angular/angular.js></script>
+      <script src=angular-audio/app/angular.audio.js></script>
+      <script src=script.js></script>
+    </head>
+    <body ng-controller=DemoController>
+        <h3>
+            {{2+3}}:"A mind needs books as a sword needs a whetstone, if it is to keep its edge." 
+        </h3>
+        <button ng-click=message()>Hi there</button>
+    </body>
+</html>
