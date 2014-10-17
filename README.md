@@ -48,4 +48,12 @@ live demonstration
     http://en.wikipedia.org/wiki/Comparison_of_JavaScript-based_source_code_editors
 
 demonstrate this in a game? (improve adventure quest)
+
+live code example
+/root
+  index.html
+  bootstrap.css (maybe with a theme)
+  angular.js
+  angular.audio.js
 ```
+
