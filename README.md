@@ -40,5 +40,11 @@ angular audio features and usage
 a presentation demonstrating ng-audio as a directive
 a presentation demonstrating its power in javascript
 
+live demonstration
+  use ediotr
+    ace editor
+    brackets
+    http://en.wikipedia.org/wiki/Comparison_of_JavaScript-based_source_code_editors
+
 demonstrate this in a game? (improve adventure quest)
 ```
