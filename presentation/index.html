@@ -37,6 +37,16 @@
 		</script>
 
 		<style>
+		@font-face {
+		  font-family: 'Roboto';
+		  src: url('fonts/Roboto-Regular.ttf'); /* IE9 Compat Modes */
+		}
+
+		@font-face {
+		  font-family: 'Roboto-thin';
+		  src: url('fonts/Roboto-Thin.ttf'); /* IE9 Compat Modes */
+		}
+
 		input {
 
 			padding: 10px 20px;
@@ -44,6 +54,16 @@
 			border-radius: 15px;
 			outline: none;
 			margin: 20px 0px;
+		}
+
+		p,li {
+			font-family: 'Roboto-thin', sans-serif !important;
+		}
+		button {
+			font-family: 'Roboto', sans-serif !important;
+		}
+		h1,h2,h3 {
+			/*font-family: 'Roboto-thin', sans-serif !important;*/
 		}
 		</style>
 
@@ -197,7 +217,7 @@
 					<pre><code data-trim contenteditable>
 <button ng-click=sound.mp3>CLICK ME</button>
 					</code></pre>
-					<button ng-click=sound.mp3>CLICK ME</button>
+					<button ng-audio=audio/chinese-temple-gong-02.mp3>CLICK ME</button>
 				</section>
 				<section data-markdown>
 					#Standard Markup
