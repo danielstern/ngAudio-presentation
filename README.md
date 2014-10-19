@@ -7,6 +7,7 @@ A presentation on Angular Audio
 Outline
 --------
 introduction
+=========
   about me
     computer developer
       maker of magic circles
@@ -57,3 +58,6 @@ live code example
   angular.audio.js
 ```
 
+#Script
+
+Hi, I'm Daniel. Thank you for taking the time to listen to my presentation. 
