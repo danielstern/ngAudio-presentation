@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app=ngAudio.LiveDemo>
+<html lang="en">
 
 <head>
     <meta charset="utf-8 ">
@@ -34,6 +34,15 @@
         link.href = 'css/print/pdf.css';
         document.getElementsByTagName('head')[0].appendChild(link);
     }
+    </script>
+
+    <script>
+    angular.module("Demo", ['ngAudio'])
+        .run(function(ngAudio, $rootScope) {
+            ngAudio.play('sound.mp3');
+            $rootScope.gong = ngAudio.load('audio/chinese-temple-gong-02.mp3');
+            $rootScope.laugh = ngAudio.load('audio/man-laughing-01.mp3');
+        });
     </script>
 
     <style>
@@ -77,8 +86,8 @@
         outline: none;
     }
     code {
-    	font-size: 26px !important;
-  }
+        font-size: 26px !important;
+    }
     </style>
 
 
@@ -87,7 +96,7 @@
 		<![endif]-->
 </head>
 
-<body>
+<body ng-app=Demo>
 
     <div class="reveal">
 
@@ -296,60 +305,36 @@
             <section>
                 <h3>javascript markup</h3>
                 <pre><code data-trim contenteditable>
-<script>
-	angular.module("Demo",['ngAudio'])
-	.controller(function(DemoController){
-		     $scope.audio = "sound3.mp3";
+&lt;script&gt;
+	angular.module(&quot;Demo&quot;,['ngAudio'])
+	.controller("DemoController",function(){
+		     $scope.audio = &quot;sound3.mp3&quot;;
 	});
-</script>
+&lt;/script&gt;
             					</code></pre>
 
-      						<pre><code data-trim contenteditable>
+                <pre><code data-trim contenteditable>
 <html ng-controller=DemoController>
 	<button ng-click=audio.play()>Click me.</button>
 </script>
             					</code></pre>
                 <button class=big-button ng-audio=audio/that.mp3>Click me.</button>
-                <script>
-                	angular.module("Demo",['ngAudio'])
-                	.run(function(ngAudio){
-                		ngAudio.play('sound.mp3')
-                	});
-                </script>
+
+            </section>
+
+
+
+            <section id="themes">
+                <h3>Bindable Volume</h3>
+                <button class=big-button ng-click='gong.currentTime = 0;gong.play()' ()>Click me.</button>
+                <input type=range min=0 max=1 step=0.1 ng-model=gong.volume>
             </section>
 
             <section id="themes">
-                <h2>Themes</h2>
-                <p>
-                    Reveal.js comes with a few themes built in:
-                    <br>
-                    <a href="?#/themes">Default</a> -
-                    <a href="?theme=sky#/themes">Sky</a> -
-                    <a href="?theme=beige#/themes">Beige</a> -
-                    <a href="?theme=simple#/themes">Simple</a> -
-                    <a href="?theme=serif#/themes">Serif</a> -
-                    <a href="?theme=night#/themes">Night</a> 
-                    <br>
-                    <a href="?theme=moon#/themes">Moon</a> -
-                    <a href="?theme=solarized#/themes">Solarized</a>
-                </p>
-                <p>
-                    <small>
-                        * Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the
-                        <code>&lt;head&gt;</code>using a
-                        <code>&lt;link&gt;</code>.
-                    </small>
-                </p>
-            </section>
-
-            <section>
-                <h2>Global State</h2>
-                <p>
-                    Set
-                    <code>data-state="something"</code>on a slide and
-                    <code>"something"</code>
-                    will be added as a class to the document element when the slide is open. This lets you apply broader style changes, like switching the background.
-                </p>
+                <h3>Bindable Current Time</h3>
+                <h4>(Good for DJs)</h4>
+                <button class=big-button ng-click='laugh.currentTime = 0;laugh.play()' ()>Click me.</button>
+                <input type=range min=0 max=laugh.length step=0.1 ng-model=laugh.currentTime>
             </section>
 
             <section data-state="customevent">
