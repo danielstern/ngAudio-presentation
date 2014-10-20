@@ -36,7 +36,7 @@ introduction
       ngAudio service - injected into code to let you bind and play sounds
       ng-audio - written into the dom to let you roll loading a sound and playing it on click into one simple directive
     takes inaccessible and ill-supported figments of the audio API, fixes all their properties 
-      currentTime is 2-way bindable but doesn't work out of the box in all browsers
+      #currentTime is 2-way bindable but doesn't work out of the box in all browsers
         some browsers won't write current time unless the sound is stopped
           ng-audio abstracts this inconsistency away
       muting - a totally new property that is two way bindable
@@ -45,10 +45,30 @@ introduction
   
 
 angular audio features and usage
-  organic features
+  general features
     bindable properties
-  api features
-    set loop, muting
+    no non-angular dependencies
+  specific features (+ -> not available natively)
+    sound volume:
+      with angular-audio: bindable volume property
+      natively: can be set, can't be read, because who would want that?
+      
+    restart sound:
+      with angular-audio: native restart() method
+      without: only takes four lines of code
+      
+    sound current time:
+      with angular audio: bindable currentTime and progress properties
+        currentTime - a number representing the number of seconds elapsed
+        progress - a ratio from 0 to 1 indicating how complete the sound is
+      natively: a variety of hacks allow you to set the current time of a sound in some browsers
+    set sound current time
+    read sound current time
+    set sound progress (+)
+    read sound progress (+)
+    set sound loop (+ for JS)
+    
+    
 
 a presentation demonstrating ng-audio as a directive
 a presentation demonstrating its power in javascript
