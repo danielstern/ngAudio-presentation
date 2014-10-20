@@ -33,9 +33,9 @@ introduction
         Search engines are only now slowly starting to index these pages properly.
   what is angular audio?
     it is an angular module that has directives and services for playing sounds
-      ngAudio service - injected into code
-      ng-audio - written into the dom
-    turns html5 audio properties into bindable properties
+      ngAudio service - injected into code to let you bind and play sounds
+      ng-audio - written into the dom to let you roll loading a sound and playing it on click into one simple directive
+    takes inaccessible and ill-supported figments of the audio API, fixes all their properties 
       currentTime is 2-way bindable but doesn't work out of the box in all browsers
         some browsers won't write current time unless the sound is stopped
           ng-audio abstracts this inconsistency away
@@ -53,6 +53,7 @@ angular audio features and usage
 a presentation demonstrating ng-audio as a directive
 a presentation demonstrating its power in javascript
 
+(?)
 live demonstration
   use ediotr
     ace editor
@@ -68,7 +69,10 @@ live code example
   bootstrap.css (maybe with a theme)
   angular.js
   angular.audio.js
+  
+  (/?)
 ```
+
 
 #Script
 
