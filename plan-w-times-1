@@ -1,11 +1,19 @@
 #Intro
-- about me (2 mins)
+- talk outline (3 mins)
+- about me (2 min)
 - a brief history of audio (3 mins)
 - why angular audio exists (3 mins)
 - what is Angular methodology? (3 mins)
 
 #Body
 - Feature Demonstration (5 mins)
+  // demo within the presentation
+  -volume
+  -play/pause
+  -current time
+  -progress
+  -muting
+
 - Under the hood analysis (5 mins)
 - Code live example (5 mins)
 
