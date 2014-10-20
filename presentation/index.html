@@ -66,7 +66,21 @@
     h3 {
         /*font-family: 'Roboto-thin', sans-serif !important;*/
     }
+    .big-button {
+        padding: 10px 20px;
+        font-size: 40px;
+        border-radius: 6px;
+        border: 1px solid #eee;
+        color: #333;
+        cursor: pointer;
+        border-bottom: 5px solid #eee;
+        outline: none;
+    }
+    code {
+    	font-size: 26px !important;
+  }
     </style>
+
 
     <!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -238,76 +252,70 @@
                 <h3>angular.js</h3>
                 <ul>
                     <li>
-                      reduces project size                        
+                        reduces project size
                     </li>
-                <li>
-                	rapidly accelerates development speed	
-                </li>
-                <li>
-                  tends to be awesome
-                </li>
+                    <li>
+                        rapidly accelerates development speed
+                    </li>
+                    <li>
+                        tends to be awesome
+                    </li>
                 </ul>
             </section>
             <section>
                 <h3>angular modules</h3>
                 <ul>
                     <li>
-                      make object properties easily accessible to dom elements            
+                        make object properties easily accessible to dom elements
                     </li>
-                <li>
-                	reduce code size by eliminating repetition
-                </li>
-                <li>
-                  tend to have active communities
-                </li>
+                    <li>
+                        reduce code size by eliminating repetition
+                    </li>
+                    <li>
+                        tend to have active communities
+                    </li>
                 </ul>
             </section>
 
             <section>
-                <img src="img/the-rock-html5.png" width=500 alt="">            </section>
+                <img src="img/the-rock-html5.png" width=500 alt="">
+            </section>
 
             <section>
                 <h2>feature overview</h2>
-                <ol>
-                    <li>bindable progress, volume and current time</li>
-                    <li>integrated looping</li>
-                    <li>useful directives</li>
-                </ol>
             </section>
 
             <section>
-                <h2>Markup</h2>
+                <h3>html markup</h3>
                 <pre><code data-trim contenteditable>
-<button ng-click=sound.mp3>CLICK ME</button>
+				&lt;button ng-audio=sound.mp3&gt;CLICK ME&lt;/button&gt;
 					</code></pre>
-                <button ng-audio=audio/chinese-temple-gong-02.mp3>CLICK ME</button>
+                <button class=big-button ng-audio=audio/that.mp3>CLICK ME</button>
             </section>
-            <section data-markdown>
-                #Standard Markup
-                <script type="text/template">
 
+            <section>
+                <h3>javascript markup</h3>
+                <pre><code data-trim contenteditable>
+<script>
+	angular.module("Demo",['ngAudio'])
+	.controller(function(DemoController){
+		     $scope.audio = "sound3.mp3";
+	});
+</script>
+            					</code></pre>
 
-                    <section data-markdown>
-                        ## For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-                    </section>
-                    ```
+      						<pre><code data-trim contenteditable>
+<html ng-controller=DemoController>
+	<button ng-click=audio.play()>Click me.</button>
+</script>
+            					</code></pre>
+                <button class=big-button ng-audio=audio/that.mp3>Click me.</button>
+                <script>
+                	angular.module("Demo",['ngAudio'])
+                	.run(function(ngAudio){
+                		ngAudio.play('sound.mp3')
+                	});
                 </script>
-            </section>
-
-            <section id="transitions">
-                <h2>Transition Styles</h2>
-                <p>
-                    You can select from different transitions, like:
-                    <br>
-                    <a href="?transition=cube#/transitions">Cube</a> -
-                    <a href="?transition=page#/transitions">Page</a> -
-                    <a href="?transition=concave#/transitions">Concave</a> -
-                    <a href="?transition=zoom#/transitions">Zoom</a> -
-                    <a href="?transition=linear#/transitions">Linear</a> -
-                    <a href="?transition=fade#/transitions">Fade</a> -
-                    <a href="?transition=none#/transitions">None</a> -
-                    <a href="?#/transitions">Default</a>
-                </p>
             </section>
 
             <section id="themes">
