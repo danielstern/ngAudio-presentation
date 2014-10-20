@@ -15,10 +15,22 @@ introduction
       ball agent
       lorien ipsum
     likes music
+      own band
+      electronic synthesizers
     likes games
+      maker of classic games like adventure quest III
   why does angular audio exist?
     originally a library to manage sounds that didnt use jquery
     jquery - the cause of, and solution to, all of life's problems.
+    part of the new order of angular-based plugins (the old order is jquery)
+    in other words, avoid the tyranny of jquery!
+    why don't we like jquery?
+      jQuery is awesome. I use jQuery whenever I use Angular.
+      However, angular is MORE awesome. Neither are negligibly small.
+      Using jQuery tends to promote hacks that reduce maintainability and increase size
+      Using angular (properly) tends to promote best practices that enhance testability, usability and load speed
+      OK, so is there ANYTHING wrong with Angular?
+        Search engines are only now slowly starting to index these pages properly.
   what is angular audio?
     it is an angular module that has directives and services for playing sounds
       ngAudio service - injected into code
