@@ -37,12 +37,7 @@
     </script>
 
     <script>
-    angular.module("Demo", ['ngAudio'])
-        .run(function(ngAudio, $rootScope) {
-            ngAudio.play('sound.mp3');
-            $rootScope.gong = ngAudio.load('audio/chinese-temple-gong-02.mp3');
-            $rootScope.laugh = ngAudio.load('audio/man-laughing-01.mp3');
-        });
+
     </script>
 
     <style>
@@ -326,16 +321,37 @@
 
             <section id="themes">
                 <h3>Bindable Volume</h3>
-                <button class=big-button ng-click='gong.currentTime = 0;gong.play()' ()>Click me.</button>
-                <input type=range min=0 max=1 step=0.1 ng-model=gong.volume>
+                <button class=big-button ng-click='melody1.currentTime = 0;melody1.play()' ()>audio.volume</button>
+                <input type=range min=0.1 max=1 step=0.1 ng-model=melody1.volume>
             </section>
 
             <section id="themes">
                 <h3>Bindable Current Time</h3>
-                <h4>(Good for DJs)</h4>
-                <button class=big-button ng-click='laugh.currentTime = 0;laugh.play()' ()>Click me.</button>
-                <input type=range min=0 max=laugh.length step=0.1 ng-model=laugh.currentTime>
+                <button class=big-button ng-click='melody2.currentTime = 0;melody2.play()' ()>audio.currentTime</button>
+                <input type=number ng-model=melody2.currentTime>
             </section>
+
+            <section id="themes">
+                <h3>Bindable Progress</h3>
+                <button class=big-button ng-click='melody3.currentTime = 0;melody3.play()' ()>audio.progress</button>
+                     <input type=range min=0.1 max=1 step=0.1 ng-model=melody3.progress>
+            </section>
+
+            <section id="muting">
+                <h3>Bindable Muting</h3>
+                <button class=big-button ng-click='melody4.currentTime = 0;melody4.play()' ()>audio.muting</button>
+                     <input type=checkbox ng-model=melody4.muting>
+            </section>
+
+       <!--      <section id="loop">
+                <h3>Bindable Loop</h3>
+                <button class=big-button ng-click='ditty.currentTime = 0;ditty.play()' ()>audio.muting</button>
+                     <select ng-model=ditty.loop ng-options="value as value for value in [1,2,3,true,false]">
+                     </select>
+            </section>
+ -->
+
+
 
             <section data-state="customevent">
                 <h2>Custom Events</h2>
